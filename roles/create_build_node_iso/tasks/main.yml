@@ -71,8 +71,7 @@
 - name: Create ISO
   ansible.builtin.shell:
     cmd: |
-      mkksiso -c 'inst.txt' \
-      -c 'console=tty0 console=ttyS0,115200' \
+      mkksiso -c 'inst.text console=tty0 console=ttyS0,115200' \
       /var/tmp/build/rhel-9.3-x86_64-dvd.iso \
       /var/tmp/build/witness-node.iso
   become: true
